@@ -1,6 +1,10 @@
 #!/bin/sh
 set -e
 
+if [ -z $(git status -s 2> /dev/null | grep Gemfile.lock) ]; then
+  exit 0
+fi
+
 export BRANCH=bundle_update_$(date -u "+%Y%m%d")
 
 git config --global user.email 'travisci@mediba.jp'
