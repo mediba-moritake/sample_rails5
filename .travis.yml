@@ -7,7 +7,10 @@ rvm:
 env:
   global:
     - TZ='Asia/Tokyo'
-    - TRAVIS_NODE_VERSION='5'
+
+install:
+  - bundle install --path vendor/bundle
+
 
 script:
   - bundle update
