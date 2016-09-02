@@ -10,7 +10,7 @@ env:
     - TRAVIS_NODE_VERSION='5'
 
 script:
-  - bundle updte
+  - bundle update
 
 cache:
   directories:
