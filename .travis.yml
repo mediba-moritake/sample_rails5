@@ -11,9 +11,9 @@ env:
 install:
   - bundle install --path vendor/bundle
 
-
 script:
   - bundle update
+  - ./script/create_pullrequest.sh
 
 cache:
   directories:
