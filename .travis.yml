@@ -13,7 +13,7 @@ install:
 
 script:
   - bundle update
-  - ./script/create_pullrequest.sh
+  - ./scripts/create_pullrequest.sh
 
 cache:
   directories:
