@@ -2,7 +2,6 @@
 set -e
 
 export BRANCH=bundle_update_$(date -u "+%Y%m%d")
-export GITHUB_ACCESS_TOKEN=[secure]
 
 git config --global user.email 'travisci@mediba.jp'
 git config --global user.name 'TravisCI'
