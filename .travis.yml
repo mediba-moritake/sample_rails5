@@ -1,0 +1,9 @@
+language: ruby
+
+env:
+  global:
+    - TZ='Asia/Tokyo'
+    - TRAVIS_NODE_VERSION='5'
+
+script:
+  - bundle updte
