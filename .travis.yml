@@ -19,6 +19,6 @@ script:
 #after_success:
 #  - ./scripts/create_pullrequest.sh
 
-cache:
-  directories:
-    - vendor/bundle
+#cache:
+#  directories:
+#    - vendor/bundle
