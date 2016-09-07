@@ -13,9 +13,8 @@ install:
   - bundle install --path vendor/bundle
 
 script:
-  - bundle update
-  - ./scripts/create_pullrequest.sh
+  - gem install travisci-bundle-update-pr
+  - travisci-bundle-update-pr TravisCI travisci@mediba.jp
 
-cache:
-  directories:
-    - vendor/bundle
+#after_success:
+#  - ./scripts/create_pullrequest.sh
