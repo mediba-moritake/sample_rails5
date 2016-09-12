@@ -7,15 +7,9 @@ rvm:
 env:
   global:
     - TZ='Asia/Tokyo'
-    - secure: "YYJeLUxLbTlEtcpNF1yKCuDYisK4epfddwB+z5woE0YnJwE/iSENzrjpfbMSD3rEvim1MY0LYLXaJw9EnUirTpElFQ7lXJZ1U924fubNdMiLqpypEmZ7G5NcNcMtv1VRyim4ZiHSzKX+DgWSz3v0+a9HEF0UOXhpF+w8th+Zg3l3x+eWclT1R7JKWAUs8l/8xUPspTXk5P6NoOnLuJaelS6BtwiEt8Bwn03uru3/+l9G4Dau/VTX/WQi8NippIida5GAvHoEFvFCptg4ucICUjjQAqCK0moKn5Ltr18SHa+MtJnp4rBaPkPvTlH9iaZuw0Pm8bGJPgrSAApfZwncopvNBSUrJv1kDT11b8MPR0Jq7VRxXUAf8wMYt4c/CYRR1gNqDi9QTaD111iIliFepNEcowXhNzG4pHmG/vM7oStcFjTpdY6SMW377tsDEh/O7z+jlW7DNeCI/AFKBAfsPZDDoXM1a+iA5WEKD46195li1WM5+221nOPilIzkvxiyJM68CZF5Yv6HkZXtSyc17AvWba/8t5+TBPu0GchTNe3AQ/JRgi0bGA7EkPonNavBh199HLo1/pG/zpUmLSxDP5hV7DxMoF8V1liHNFNZn0Qr9UeKC/JCx6s27zwEqSr9nU40+siP1ea8BCQW2n++aMQ9dmXZAJOqITNfWNayaMc="
 
 install:
   - bundle install --path vendor/bundle
 
-script:
-  - bundle update
-  - ./scripts/create_pullrequest.sh
-
-cache:
-  directories:
-    - vendor/bundle
+before_script:
+  - $TRAVIS_BUILD_DIR/scripts/travisci-bundle-update-pr.sh
